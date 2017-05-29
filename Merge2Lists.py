@@ -26,8 +26,6 @@ class Solution(object):
                 newList = newList.next
                 l2 = l2.next
         endList = l1 if l1 != None else l2
-        while(endList != None):
-            newList.next = ListNode(endList.val)
-            newList = newList.next
-            endList = endList.next
+        newList.next = endList
+    
         return head.next
