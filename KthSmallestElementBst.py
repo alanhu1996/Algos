@@ -22,3 +22,14 @@ class Solution(object):
             dfs(root.right, count)
             return count
         return dfs(root)[k - 1]
+
+        # Basically passing k by reference to store the in order decrements properly.
+        def dfsSpaceEfficient(root, k):
+            if not root:
+                return root
+            left = dfs(root.left, k)
+            k[0] -= 1
+            if k[0] == 0:
+                return root.val
+            right = dfs(root.right, k)
+            return left if left != None else right
