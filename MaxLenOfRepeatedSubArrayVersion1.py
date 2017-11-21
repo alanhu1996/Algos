@@ -1,6 +1,6 @@
 # Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays.
 
-# O(n^2) runtime, O(n^2) space. Timed out on the last test case on leetcode.
+# O(n^2) runtime, O(n^2) space. Timed out on the last test case on leetcode. UPDATE: resubmitted one day later, was accepted.
 
 class Solution(object):
     def findLength(self, A, B):
